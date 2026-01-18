@@ -1,5 +1,8 @@
 {
-    "manifest_version":3,
-    "name":"Hint extension",
-    "version":1.0
+  "manifest_version": 3,
+  "name": "Hint Extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  }
 }
