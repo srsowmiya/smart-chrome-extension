@@ -1,0 +1,1 @@
+console.log("the popup runs fine with js")
