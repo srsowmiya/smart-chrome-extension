@@ -7,7 +7,14 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": [ 
+      "https://leetcode.com/*",
+      "https://www.codechef.com/*",
+      "https://atcoder.jp/*",
+      "https://practice.geeksforgeeks.org/*",
+      "https://www.geeksforgeeks.org/*",
+      "https://www.codingninjas.com/*"
+      ],
       "js": ["content.js"]
     }
   ]
