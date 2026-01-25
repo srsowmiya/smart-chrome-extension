@@ -1,1 +1,1 @@
-console.log("this content js file is injected properly")
+chrome.runtime.sendMessage({message:"hello"})
