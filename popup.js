@@ -7,11 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
       tabs[0].id,
       { type: "GET_MESSAGE_INFO" },
       (response) => {
+        t=response.title
+        p=response.platform
+        u=response.url
+        d=response.difficulty
 
-        if (response && response.title) {
-          output.textContent = response.title;
-        } else {
-          output.textContent = "Open a coding problem page";
+        if(response!=null)
+        {
+            document.querySelector("#title").innerHTML=t
+            document.querySelector("#platf").innerHTML=p
+            document.querySelector("#diffi").innerHTML=d
+            document.querySelector("#url").innerHTML=u
         }
 
       }
