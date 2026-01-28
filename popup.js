@@ -12,13 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         u=response.url
         d=response.difficulty
 
-        if(response!=null)
-        {
-            document.querySelector("#title").innerHTML=t
-            document.querySelector("#platf").innerHTML=p
-            document.querySelector("#diffi").innerHTML=d
-            document.querySelector("#url").innerHTML=u
-        }
+       
 
       }
     );
@@ -26,3 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+document.querySelector("#btn").addEventListener("click", () => {
+  document.querySelector("#hint").textContent =
+    "Think about using a hash map to reduce time complexity.";
+});
+
