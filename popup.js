@@ -1,28 +1,32 @@
-document.addEventListener("DOMContentLoaded", () => {
+let problemData = null;
 
-  const output = document.querySelector("#test");
+document.addEventListener("DOMContentLoaded", () => {
 
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.tabs.sendMessage(
       tabs[0].id,
       { type: "GET_MESSAGE_INFO" },
       (response) => {
-        t=response.title
-        p=response.platform
-        u=response.url
-        d=response.difficulty
-
-       
-
+        problemData = response;
       }
     );
+  });
 
+  document.querySelector("#btn").addEventListener("click", () => {
+    const hint = getHint(problemData);
+    document.querySelector("#hint").textContent = hint;
   });
 
 });
 
-document.querySelector("#btn").addEventListener("click", () => {
-  document.querySelector("#hint").textContent =
-    "Think about using a hash map to reduce time complexity.";
-});
+function getHint(problemData){
+  if(problemData.difficulty==="Easy")
+      return "start with a brute force"
+  else if(problemData.difficulty==="Medium")
+    return "try to optimise your solution"
+  else if(problemData.difficulty==="Hard")
+    return "Look at the constraints properly"
+  
+}
+
 
