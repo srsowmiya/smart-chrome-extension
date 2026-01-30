@@ -5,6 +5,14 @@
   "action": {
     "default_popup": "popup.html"
   },
+  "host_permissions": [
+  "http://localhost:3000/*"
+]
+,
+"permissions": [
+  "activeTab"
+]
+,
   "content_scripts": [
     {
       "matches": [ 
