@@ -12,3 +12,8 @@ app.get("/",(req,res)=>{
 app.listen(3000,()=>{
     console.log('port started at localhost 3000')
 })
+
+app.post('/hint',(req,res)=>{
+    const problemData=req.body
+    res.send(problemData)
+})
