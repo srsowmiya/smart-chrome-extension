@@ -8,15 +8,17 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-console.log(process.env?"API IS AVAILABLE " :"API IS MISSING")
-// test route
+
+
 app.get("/", (req, res) => {
-  res.send("Backend is running successfully 🚀");
+  res.send("Backend is running successfully ");
 });
 
-// hint API
+
 app.post("/hint", (req, res) => {
   const problemData = req.body;
+  
+const responseHint=`this is a problem called ${problemData.title} and its difficulty is ${problemData.difficulty} and its from the platform ${problemData.platform} i want you to give the hints for me to solve the problem! remember only the hints not the solutions for example try saying like think using a hashmap etc.No code, no step-by-step solution. Just a conceptual nudge on how to approach it`
 
   console.log("Received from extension:", problemData);
 
