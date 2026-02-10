@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelector("#btn").addEventListener("click", async () => {
 
-    document.querySelector("#hint").textContent = "Thinking... 🤔";
+    document.querySelector("#hint").textContent = "Thinking... ";
 
     try {
       const response = await fetch("http://localhost:3000/hint", {
