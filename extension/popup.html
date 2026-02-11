@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            width: 350px;
+            height: 200px; /* Fixed height to make "centering" visible */
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
-<body>
-   <button id="btn">Get Hint</button>
-   <div id="hint"></div>
+<body class="bg-slate-50 font-sans antialiased">
+
+    <div id="main-container" class="h-full w-full flex items-center justify-center p-6">
+        
+        <button id="btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-2xl transition-all active:scale-[0.95] shadow-xl shadow-indigo-100 flex items-center justify-center gap-2">
+            <span>✨</span> Get Hint
+        </button>
+
+        <div id="hint" class="hidden w-full animate-in fade-in zoom-in-95 duration-300">
+            <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm text-center">
+                <p class="text-[10px] font-black text-indigo-500 uppercase tracking-widest mb-3">AI Suggestion</p>
+                <p id="hint-text" class="text-sm text-slate-700 leading-relaxed font-semibold italic">
+                    </p>
+                <button onclick="location.reload()" class="mt-4 text-[10px] text-slate-400 hover:text-indigo-500 font-bold uppercase tracking-tighter transition-colors">
+                    Reset
+                </button>
+            </div>
+        </div>
+
+    </div>
+
     <script src="popup.js"></script>
 </body>
 </html>

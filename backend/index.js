@@ -16,7 +16,7 @@ const groq = new Groq({
 
 
 app.get("/", (req, res) => {
-  res.send("Backend is running ✅");
+  res.send("Backend is running ");
 });
 
 
@@ -71,5 +71,5 @@ Give a helpful hint to approach this problem.
 });
 
 app.listen(3000, () => {
-  console.log("🚀 Backend running at http://localhost:3000");
+  console.log(" Backend running at http://localhost:3000");
 });
